@@ -7,9 +7,10 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-   server: {
+    preview: {
     host: '0.0.0.0',
-    port: 5173
+    port: 5173,
+    allowedHosts: ['mobile-brand-website.onrender.com']
   }
 });
 
