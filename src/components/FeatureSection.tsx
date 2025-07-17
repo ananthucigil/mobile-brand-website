@@ -25,9 +25,9 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   reverse = false
 }) => {
   return (
-    <section id={id} className="py-20 relative overflow-hidden">
+    <section id={id} className="py-20 relative overflow-hidden  bg-gradient-to-br from-slate-50 to-slate-200 mt-20">
       {/* Background Gradient */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-5`} />
+      <div className={`absolute inset-0 bg-gradient-to-br from-slate-50 to-slate-200 opacity-5`} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`grid lg:grid-cols-2 gap-16 items-center ${reverse ? 'lg:grid-flow-col-dense' : ''}`}>
@@ -63,11 +63,6 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                 </div>
               ))}
             </div>
-
-            {/* CTA Button */}
-            <button className={`bg-gradient-to-r ${gradient} text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300`}>
-              Explore Features
-            </button>
           </div>
 
           {/* Image */}
