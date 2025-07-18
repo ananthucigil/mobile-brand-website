@@ -136,7 +136,7 @@ const HeroCarousel = () => {
   return (
     <section 
       ref={carouselRef}
-      className="relative h-screen overflow-hidden bg-black"
+      className="relative h-screen overflow-hidden bg-black z-carousel"
       onMouseEnter={() => !isMobile && setIsAutoPlaying(false)}
       onMouseLeave={() => !isMobile && setIsAutoPlaying(true)}
       onTouchStart={handleTouchStart}

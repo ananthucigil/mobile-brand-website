@@ -47,6 +47,23 @@ body{
 
 /* Custom utilities */
 @layer utilities {
+  /* Z-index management system */
+  .z-navbar {
+    z-index: 1000;
+  }
+  
+  .z-carousel {
+    z-index: 10;
+  }
+  
+  .z-modal {
+    z-index: 2000;
+  }
+  
+  .z-tooltip {
+    z-index: 3000;
+  }
+  
   .animation-delay-200 {
     animation-delay: 200ms;
   }
