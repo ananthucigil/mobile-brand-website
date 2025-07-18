@@ -167,13 +167,6 @@ const HeroCarousel = () => {
                 {/* Content Section - Mobile optimized */}
                 <div className="text-white z-10 text-center lg:text-left order-2 lg:order-1">
                   
-                  {/* Series Badge - Mobile friendly */}
-                  <div className="inline-flex items-center px-3 py-1 mb-4 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                    <span className="text-xs sm:text-sm font-medium text-white/90">
-                      {slide.series}
-                    </span>
-                  </div>
-
                   {/* Model Name - Responsive typography */}
                   <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-4">
                     <span className="bg-gradient-to-r from-white via-white to-white/90 bg-clip-text text-transparent drop-shadow-2xl">
