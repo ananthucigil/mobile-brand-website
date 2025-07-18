@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Shield, Smartphone} from 'lucide-react';
-
+import { Link } from "react-router-dom"; 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -16,7 +16,8 @@ const HeroCarousel = () => {
       standoutFeature: 'Ultra-thin 6.1mm design',
       backgroundImage: '/images/carousel_image1.jpg',
       gradient: 'from-blue-900/80 via-purple-900/70 to-indigo-900/80',
-      accentColor: 'from-blue-500 to-purple-600'
+      accentColor: 'from-blue-500 to-purple-600',
+      buttonUrl: '/cosmo-a/model-1'
     },
     {
       id: 2,
@@ -25,7 +26,8 @@ const HeroCarousel = () => {
       standoutFeature: '48MP Pro Camera System',
       backgroundImage: '/images/carousel_image2.jpeg',
       gradient: 'from-gray-900/80 via-slate-800/70 to-zinc-900/80',
-      accentColor: 'from-gray-600 to-slate-800'
+      accentColor: 'from-gray-600 to-slate-800',
+      buttonUrl: '/cosmo-b/model-1'
     },
     {
       id: 3,
@@ -34,7 +36,8 @@ const HeroCarousel = () => {
       standoutFeature: '7000mAh Ultra Battery',
       backgroundImage: '/images/carousel_image3.png',
       gradient: 'from-emerald-900/80 via-teal-800/70 to-cyan-900/80',
-      accentColor: 'from-emerald-500 to-teal-600'
+      accentColor: 'from-emerald-500 to-teal-600',
+      buttonUrl: '/cosmo-c/model-1'
     },
     {
       id: 4,
@@ -43,7 +46,8 @@ const HeroCarousel = () => {
       standoutFeature: '165Hz Gaming Display',
       backgroundImage: '/images/carousel_image4.png',
       gradient: 'from-red-900/80 via-orange-800/70 to-yellow-900/80',
-      accentColor: 'from-red-500 to-orange-600'
+      accentColor: 'from-red-500 to-orange-600',
+      buttonUrl: '/cosmo-d/model-1'
     }
   ];
 
@@ -141,9 +145,11 @@ const HeroCarousel = () => {
 
                   {/* Learn More Button with Responsive Centering */}
                   <div className="flex justify-center lg:justify-start mt-10">
-                    <button className={`bg-gradient-to-r ${slide.accentColor} text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:shadow-lg transform hover:scale-105 transition-all duration-300 shadow-md border border-white/20 hover:border-white/40 w-auto sm:w-auto md:w-auto lg:w-auto`}>
-                      Learn More
-                    </button>
+                    <Link to={slide.buttonUrl}>
+                      <button className={`bg-gradient-to-r ${slide.accentColor} text-white px-6 py-2.5 rounded-full font-semibold text-sm hover:shadow-lg transform hover:scale-105 transition-all duration-300 shadow-md border border-white/20 hover:border-white/40 w-auto sm:w-auto md:w-auto lg:w-auto`}>
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 {/* Right Content - Image with Responsive Sizing */}
