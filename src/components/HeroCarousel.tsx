@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, Smartphone} from 'lucide-react';
+import { ChevronLeft, ChevronRight, Zap} from 'lucide-react';
 import ShieldIcon from './ShieldIcon';
 import { Link } from "react-router-dom"; 
 const HeroCarousel = () => {
@@ -139,7 +139,7 @@ const HeroCarousel = () => {
                       <span className="text-sm font-medium">Premium Build</span>
                     </div>
                     <div className="flex items-center space-x-2 text-white/80">
-                      <Smartphone className="w-5 h-5" />
+                      <Zap className="w-5 h-5" />
                       <span className="text-sm font-medium">Latest Technology</span>
                     </div>
                   </div>
