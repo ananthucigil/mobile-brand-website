@@ -192,16 +192,6 @@ const HeroCarousel = () => {
                   </div>
 
                   {/* CTA Button - Touch-friendly */}
-                  <div className="flex justify-center lg:justify-start">
-                    <Link to={slide.buttonUrl}>
-                      <button 
-                        className={`bg-gradient-to-r ${slide.accentColor} text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-sm sm:text-base hover:shadow-xl transform hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg border border-white/20 hover:border-white/40 min-w-[140px] touch-manipulation`}
-                        aria-label={`Learn more about ${slide.model}`}
-                      >
-                        Learn More
-                      </button>
-                    </Link>
-                  </div>
                 </div>
 
                 {/* Image Section - Responsive sizing */}
