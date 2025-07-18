@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronLeft, ChevronRight, Shield, Smartphone} from 'lucide-react';
+import { ChevronLeft, ChevronRight, Smartphone} from 'lucide-react';
+import ShieldIcon from './ShieldIcon';
 import { Link } from "react-router-dom"; 
 const HeroCarousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -134,7 +135,7 @@ const HeroCarousel = () => {
                   {/* Additional Info */}
                   <div className="flex justify-center lg:justify-start items-center space-x-6 mt-10">
                     <div className="flex items-center space-x-2 text-white/80">
-                      <Shield className="w-5 h-5" />
+                      <ShieldIcon className="w-5 h-5" variant="gradient" />
                       <span className="text-sm font-medium">Premium Build</span>
                     </div>
                     <div className="flex items-center space-x-2 text-white/80">
