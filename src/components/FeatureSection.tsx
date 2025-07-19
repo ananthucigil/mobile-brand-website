@@ -13,8 +13,11 @@ interface FeatureSectionProps {
   }>;
   gradient: string;
   reverse?: boolean;
+  modelName?: string; // Optional prop for model name
 }
-
+type FeatureSectionsProps ={
+  modelName: string;
+}
 const FeatureSection: React.FC<FeatureSectionProps> = ({
   id,
   title,
@@ -22,10 +25,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   image,
   features,
   gradient,
-  reverse = false
+  reverse = false,
 }) => {
   return (
-    <section id={id} className="py-20 relative overflow-hidden  bg-gradient-to-br from-slate-50 to-slate-200 mt-20">
+    <section id={id} className="py-10 relative overflow-hidden  bg-gradient-to-br from-slate-50 to-slate-200">
       {/* Background Gradient */}
       <div className={`absolute inset-0 bg-gradient-to-br from-slate-50 to-slate-200 opacity-5`} />
       
@@ -34,10 +37,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
           {/* Content */}
           <div className={`space-y-8 ${reverse ? 'lg:col-start-2' : ''}`}>
             <div>
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              {title && <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 mt-20 ml-4l">
                 {title}
-              </h2>
-              <p className="text-xl text-gray-600 max-w-lg">
+              </h2>}
+              <p className="text-xl text-gray-600 max-w-lg">  
                 {subtitle}
               </p>
             </div>
@@ -90,11 +93,11 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
   );
 };
 
-const FeatureSections = () => {
+const FeatureSections:React.FC<FeatureSectionsProps> = ({modelName}) => {
   const sections = [
     {
       id: 'Quasar',
-      title: 'Cosmo A Series',
+      title: modelName,
       subtitle: 'Ultimate performance meets premium design. The pinnacle of smartphone innovation.',
       image: 'https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=800',
       gradient: 'from-purple-600 to-blue-600',
@@ -118,7 +121,7 @@ const FeatureSections = () => {
     },
     {
       id: 'cosmo-b',
-      title: 'Cosmo B Series',
+      title: '',
       subtitle: 'Unfold the future with revolutionary foldable technology that redefines mobile experiences.',
       image: 'https://images.pexels.com/photos/5081918/pexels-photo-5081918.jpeg?auto=compress&cs=tinysrgb&w=800',
       gradient: 'from-gray-700 to-gray-900',
@@ -143,7 +146,7 @@ const FeatureSections = () => {
     },
     {
       id: 'cosmo-c',
-      title: 'Cosmo C Series',
+      title: '',
       subtitle: 'Premium features accessible to everyone. Exceptional value without compromise.',
       image: 'https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=800',
       gradient: 'from-emerald-500 to-teal-600',
@@ -168,7 +171,7 @@ const FeatureSections = () => {
   ];
 
   return (
-    <div>
+    <div className="mt-20 bg-gradient-to-br from-slate-50 to-slate-200">
       {sections.map((section) => (
         <FeatureSection key={section.id} {...section} />
       ))}

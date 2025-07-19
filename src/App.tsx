@@ -3,7 +3,7 @@ import LatestModels from './pages/LatestModels';
 import Homepage from './pages/Homepage';
 import ModelDescription from './pages/ModelDescription';
 import { MainLayout } from './layout/MainLayout';
-
+import NotFoundPage from './pages/NotFoundPage';
 function App() {
   const phoneModels1 = [
     {
@@ -151,22 +151,23 @@ const phoneModels3 = [
         <Route path="cosmo-b" element={<LatestModels series="Cosmo B" phoneModels={phoneModels2}/>} />
         <Route path="cosmo-c" element={<LatestModels series="Cosmo C" phoneModels={phoneModels3}/>} />
         <Route path="cosmo-d" element={<LatestModels series="Cosmo D" phoneModels={phoneModels4}/>} />
-        <Route path="cosmo-a/model-1" element={<ModelDescription/>}/>
-        <Route path="cosmo-a/model-2" element={<ModelDescription/>}/>
-        <Route path="cosmo-a/model-3" element={<ModelDescription/>}/>
-        <Route path="cosmo-a/model-4" element={<ModelDescription/>}/>
-        <Route path="cosmo-b/model-1" element={<ModelDescription/>}/>
-        <Route path="cosmo-b/model-2" element={<ModelDescription/>}/>
-        <Route path="cosmo-b/model-3" element={<ModelDescription/>}/>
-        <Route path="cosmo-b/model-4" element={<ModelDescription/>}/>
-        <Route path="cosmo-c/model-1" element={<ModelDescription/>}/>
-        <Route path="cosmo-c/model-2" element={<ModelDescription/>}/>
-        <Route path="cosmo-c/model-3" element={<ModelDescription/>}/>
-        <Route path="cosmo-c/model-4" element={<ModelDescription/>}/>
-        <Route path="cosmo-d/model-1" element={<ModelDescription/>}/>
-        <Route path="cosmo-d/model-2" element={<ModelDescription/>}/>
-        <Route path="cosmo-d/model-3" element={<ModelDescription/>}/>
-        <Route path="cosmo-d/model-4" element={<ModelDescription/>}/>
+        <Route path="cosmo-a/model-1" element={<ModelDescription modelName="Cosmo A12 Pro"/>}/>
+        <Route path="cosmo-a/model-2" element={<ModelDescription modelName="Cosmo A11" />}/>
+        <Route path="cosmo-a/model-3" element={<ModelDescription modelName="Cosmo A10" />}/>
+        <Route path="cosmo-a/model-4" element={<ModelDescription modelName="Cosmo A9" />}/>
+        <Route path="cosmo-b/model-1" element={<ModelDescription modelName="Cosmo B8 Elite" />}/>
+        <Route path="cosmo-b/model-2" element={<ModelDescription modelName="Cosmo B7" />}/>
+        <Route path="cosmo-b/model-3" element={<ModelDescription modelName="Cosmo B6" />}/>
+        <Route path="cosmo-b/model-4" element={<ModelDescription modelName="Cosmo B5" />}/>
+        <Route path="cosmo-c/model-1" element={<ModelDescription modelName="Cosmo C13 Max" />}/>
+        <Route path="cosmo-c/model-2" element={<ModelDescription modelName="Cosmo C12" />}/>
+        <Route path="cosmo-c/model-3" element={<ModelDescription modelName="Cosmo C11" />}/>
+        <Route path="cosmo-c/model-4" element={<ModelDescription modelName="Cosmo C10" />}/>
+        <Route path="cosmo-d/model-1" element={<ModelDescription modelName="Cosmo D5 Gaming" />}/>
+        <Route path="cosmo-d/model-2" element={<ModelDescription modelName="Cosmo D4" />}/>
+        <Route path="cosmo-d/model-3" element={<ModelDescription modelName="Cosmo D3" />}/>
+        <Route path="cosmo-d/model-4" element={<ModelDescription modelName="Cosmo D2" />}/>
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     )
   )

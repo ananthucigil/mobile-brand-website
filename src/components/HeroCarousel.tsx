@@ -134,11 +134,11 @@ const HeroCarousel = () => {
                   {/* Additional Info */}
                   <div className="flex justify-center lg:justify-start items-center space-x-6 mt-10">
                     <div className="flex items-center space-x-2 text-white/80">
-                      <Shield className="w-5 h-5" />
+                      <Shield className="w-5 h-5 text-yellow-400" />
                       <span className="text-sm font-medium">Premium Build</span>
                     </div>
                     <div className="flex items-center space-x-2 text-white/80">
-                      <Smartphone className="w-5 h-5" />
+                      <Smartphone className="w-5 h-5 text-yellow-400" />
                       <span className="text-sm font-medium">Latest Technology</span>
                     </div>
                   </div>

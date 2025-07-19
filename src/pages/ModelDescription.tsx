@@ -1,8 +1,10 @@
 import FeatureSections from "../components/FeatureSection";
-
-const ModelDescription = () => {
+type ModelDescriptionProps = {
+  modelName: string;  
+}
+const ModelDescription:React.FC<ModelDescriptionProps> = ({modelName}) => {
   return (
-   <FeatureSections />
+   <FeatureSections modelName={modelName} />
   )
 }
 
